@@ -1,0 +1,32 @@
+.container {
+  height: 100%;
+}
+.header-container {
+  background-color: black;
+  color: white;
+}
+.cups-container {
+  background-color: white;
+  padding: 4px 8px;
+
+  .cup-select-container {
+    width: 70px;
+    cursor: pointer;
+    .cup-image-container {
+      max-height: 70px;
+      height: 100%;
+    }
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    .cup-select {
+      width: 100%;
+      object-fit: cover;
+    }
+    .cup-label {
+      font-weight: 500;
+      color: #964b00;
+      margin-top: 1rem;
+    }
+  }
+}

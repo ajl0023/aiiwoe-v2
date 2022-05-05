@@ -1,0 +1,27 @@
+.wrapper {
+  max-width: 500px;
+  width: 100%;
+}
+.messages-wrapper {
+  width: 100%;
+  position: relative;
+  background: white;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 110%;
+  }
+}
+.message-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow-y: auto;
+}
+.send-btn {
+  cursor: pointer;
+}

@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.356b7b87.chunk.css",
+    "main.js": "/static/js/main.2c43b9a7.chunk.js",
+    "main.js.map": "/static/js/main.2c43b9a7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.08c0f17f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.08c0f17f.js.map",
+    "static/css/2.9c195d9f.chunk.css": "/static/css/2.9c195d9f.chunk.css",
+    "static/js/2.fe1b0832.chunk.js": "/static/js/2.fe1b0832.chunk.js",
+    "static/js/2.fe1b0832.chunk.js.map": "/static/js/2.fe1b0832.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.9c195d9f.chunk.css.map": "/static/css/2.9c195d9f.chunk.css.map",
+    "static/css/main.356b7b87.chunk.css.map": "/static/css/main.356b7b87.chunk.css.map",
+    "static/js/2.fe1b0832.chunk.js.LICENSE.txt": "/static/js/2.fe1b0832.chunk.js.LICENSE.txt",
+    "static/media/affogato.png": "/static/media/affogato.e3ef5e6c.png",
+    "static/media/App.css": "/static/media/background.23f7c3b9.png",
+    "static/media/black.png": "/static/media/black.22526409.png",
+    "static/media/cafe.png": "/static/media/cafe.e3b5df44.png",
+    "static/media/cap.png": "/static/media/cap.afaeea28.png",
+    "static/media/decaf.png": "/static/media/decaf.5411da4a.png",
+    "static/media/espresso.png": "/static/media/espresso.bf8690f7.png",
+    "static/media/latte.png": "/static/media/latte.67572742.png",
+    "static/media/logo.3b2d4623.png": "/static/media/logo.3b2d4623.png",
+    "static/media/mocha.png": "/static/media/mocha.0716fcb5.png",
+    "static/media/rist.png": "/static/media/rist.c85dd702.png",
+    "static/media/ChatTable.scoped.scss?scopeId=af79e991": "/static/media/wood-texture.01536ba9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.08c0f17f.js",
+    "static/css/2.9c195d9f.chunk.css",
+    "static/js/2.fe1b0832.chunk.js",
+    "static/css/main.356b7b87.chunk.css",
+    "static/js/main.2c43b9a7.chunk.js"
+  ]
+}

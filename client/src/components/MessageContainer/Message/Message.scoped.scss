@@ -1,0 +1,30 @@
+.msg-container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+
+  overflow: hidden;
+  .prof-image-container {
+    width: 40px;
+    margin-right: 10px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .text-container {
+    padding: 5px 10px;
+
+    border-radius: 4px;
+    color: white;
+  }
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.incoming-msg {
+  background-color: rgba(101, 87, 38, 0.92);
+}
+.current-user-msg {
+  background-color: rgba(110, 62, 7, 0.92);
+}
