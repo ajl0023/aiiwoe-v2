@@ -1,29 +1,52 @@
 .container {
   height: 100%;
 }
+.select-wrapper {
+  width: 100%;
+
+  max-width: 800px;
+  display: flex;
+ 
+}
 .header-container {
   background-color: black;
   color: white;
 }
 .cups-container {
+  justify-content: space-between;
   background-color: white;
   padding: 4px 8px;
 
+  // flex-wrap: wrap;
+  overflow-y: auto;
+  overflow-x: auto;
+  width: 100%;
+  // @include min-screen($mobile-sm) {
+  //   flex-wrap: nowrap;
+  // }
   .cup-select-container {
+    height: auto;
+
     width: 70px;
+    flex-shrink: 0;
+    padding: 7px;
+    // @include min-screen($mobile-sm) {
+    //   width: 70px;
+
+    //   flex-shrink: 0;
+    // }
     cursor: pointer;
     .cup-image-container {
-      max-height: 70px;
+      width: 100%;
       height: 100%;
     }
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
+
     .cup-select {
       width: 100%;
       object-fit: cover;
     }
     .cup-label {
+      font-size: 0.8em;
       font-weight: 500;
       color: #964b00;
       margin-top: 1rem;

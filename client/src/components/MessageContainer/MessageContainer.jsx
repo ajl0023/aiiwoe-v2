@@ -44,18 +44,17 @@ export default function MessageContainer(props) {
         active={popperActive}
       />
 
-      <div className="item-container">
+      <div className="messages-container">
         {messages.map((msg) => {
           return (
-            <div key={msg.id} className="message-container">
-              <Message
-                popperContent={msg.sent_at}
-                setPopperRef={setPopperRef}
-                setPopperContent={setPopperContent}
-                setPopperActive={setPopperActive}
-                msg={msg}
-              />
-            </div>
+            <Message
+              key={msg.id}
+              popperContent={msg.sent_at}
+              setPopperRef={setPopperRef}
+              setPopperContent={setPopperContent}
+              setPopperActive={setPopperActive}
+              msg={msg}
+            />
           );
         })}
       </div>

@@ -1,8 +1,13 @@
+.message-container {
+  width: 100%;
+ 
+}
+
 .msg-container {
   display: flex;
   align-items: center;
   padding: 5px;
-
+  width: 100%;
   overflow: hidden;
   .prof-image-container {
     width: 40px;
@@ -14,12 +19,12 @@
   }
   .text-container {
     padding: 5px 10px;
-
+    white-space: normal;
+    width: 100%;
     border-radius: 4px;
+    word-break: break-all;
+
     color: white;
-  }
-  &:not(:last-child) {
-    margin-bottom: 1rem;
   }
 }
 .incoming-msg {
@@ -27,4 +32,7 @@
 }
 .current-user-msg {
   background-color: rgba(110, 62, 7, 0.92);
+}
+.text-wrapper {
+  max-width: 100%;
 }

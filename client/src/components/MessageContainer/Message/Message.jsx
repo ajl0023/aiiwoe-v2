@@ -34,22 +34,24 @@ export function Message({
           </PopperWrapper>
         </div>
       </div>
-      <PopperWrapper
-        content={msg.sent_at}
-        setPopperRef={setPopperRef}
-        setPopperContent={setPopperContent}
-        setPopperActive={setPopperActive}
-      >
-        <div
-          className={classNames({
-            "text-container": true,
-            "incoming-msg": socket.id !== msg.user.id,
-            "current-user-msg": socket.id === msg.user.id,
-          })}
+      <div className="text-wrapper">
+        <PopperWrapper
+          content={msg.sent_at}
+          setPopperRef={setPopperRef}
+          setPopperContent={setPopperContent}
+          setPopperActive={setPopperActive}
         >
-          {msg.text}
-        </div>
-      </PopperWrapper>
+          <div
+            className={classNames({
+              "text-container": true,
+              "incoming-msg": socket.id !== msg.user.id,
+              "current-user-msg": socket.id === msg.user.id,
+            })}
+          >
+            {msg.text}
+          </div>
+        </PopperWrapper>
+      </div>
     </div>
   );
 }

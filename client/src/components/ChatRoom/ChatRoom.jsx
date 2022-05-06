@@ -7,6 +7,7 @@ import { useCheckSocket } from "../../hooks/useCheckSocket";
 import { getNewSocket, getSocket } from "../../socketInstance";
 import ChatBox from "../ChatBox/ChatBox";
 import { ChatTable } from "../ChatTable/ChatTable";
+import UsersBar from "../UsersBar/UsersBar";
 
 import "./ChatRoom.scoped.scss";
 
@@ -23,6 +24,11 @@ export default function ChatRoom(props) {
         setUsers(users);
       }
     });
+    socket.on("_disconnect", (users) => {
+      if (!ignore) {
+        setUsers(users);
+      }
+    });
     return () => {
       ignore = true;
     };
@@ -31,7 +37,10 @@ export default function ChatRoom(props) {
   return (
     <div className="wrapper d-flex">
       <ChatTable users={users} />
-      <ChatBox />
+      <div className="messages-user-container">
+        <UsersBar users={users} />
+        <ChatBox />
+      </div>
     </div>
   );
 }

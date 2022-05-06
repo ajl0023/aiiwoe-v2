@@ -1,2 +1,1 @@
-cd client 
-npm run build && cd .. && git add . && git commit -m "fixed error emitting to client" && git push origin master
+cd client && npm run build && cd .. && git add . && git commit -m "added responsiveness changes/functionality when user leaves" && git push origin master

@@ -36,7 +36,6 @@ io.on("connection", (socket) => {
   socket.leave(socket.id);
 
   socket.on("join", ({ name, type }, callback) => {
-    console.log(type);
     const rooms = io.of("").adapter.rooms;
 
     const empty_room = findEmptyRoom(rooms, type);
@@ -66,21 +65,21 @@ io.on("connection", (socket) => {
   });
 });
 io.of("/").adapter.on("leave-room", (room, id) => {
-  // const rooms = io.of("").adapter.rooms;
-  // const user = { ...getUser(id) };
-  // const users = getUsersInRoom(rooms, room);
-  // deleteUser(id);
-  // io.to(room).emit("_disconnect", users, user);
-  // io.to(room).emit(
-  //   "message",
-  //   {
-  //     text: `user ${user.name} has left the room`,
-  //     sent: Date.now(),
-  //   },
-  //   {
-  //     name: "admin",
-  //   }
-  // );
+  const rooms = io.of("").adapter.rooms;
+  const user = { ...getUser(id) };
+  const users = getUsersInRoom(rooms, room);
+  deleteUser(id);
+  io.to(room).emit("_disconnect", users, user);
+  io.to(room).emit(
+    "message",
+    {
+      text: `user ${user.name} has left the room`,
+      sent: Date.now(),
+    },
+    {
+      name: "admin",
+    }
+  );
 });
 io.of("/").adapter.on("join-room", (room, id) => {
   const rooms = io.of("").adapter.rooms;

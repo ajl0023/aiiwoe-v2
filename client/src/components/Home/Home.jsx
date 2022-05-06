@@ -9,20 +9,22 @@ const Home = (props) => {
 
   return (
     <div className="container">
-      <div className="logo-container">
-        <img src={logo} alt="" />
-      </div>
-      <div className="button-container">
-        <button className="btn btn-primary">
-          <Link className="btn-link" to="/select?type=group">
-            Group
-          </Link>
-        </button>
-        <button className="btn btn-outline-primary">
-          <Link className="btn-link" to="/select?type=individual">
-            Individual
-          </Link>
-        </button>
+      <div className="main-content-container">
+        <div className="logo-container">
+          <img src={logo} alt="" />
+        </div>
+        <div className="button-container">
+          <button className="btn btn-primary">
+            <Link className="btn-link" to="/select?type=group">
+              Group
+            </Link>
+          </button>
+          <button className="btn btn-outline-primary">
+            <Link className="btn-link" to="/select?type=individual">
+              Individual
+            </Link>
+          </button>
+        </div>
       </div>
     </div>
   );

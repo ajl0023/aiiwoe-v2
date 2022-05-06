@@ -5,6 +5,16 @@ module.exports = {
       plugin: require("craco-plugin-scoped-css"),
     },
   ],
+  style: {
+    sass: {
+      loaderOptions: {
+        additionalData: `
+          @import "src/styles/root.scss";
+       
+        `,
+      },
+    },
+  },
   webpack: {
     plugins: {
       add: [

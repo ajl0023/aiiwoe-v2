@@ -1,9 +1,13 @@
 .wrapper {
-  max-width: 500px;
   width: 100%;
+}
+.messages-userbar-container {
+  display: flex;
+  flex-direction: column;
 }
 .messages-wrapper {
   width: 100%;
+
   position: relative;
   background: white;
 
@@ -15,9 +19,11 @@
   }
 }
 .message-container {
+  width: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
+
   right: 0;
   left: 0;
   overflow-y: auto;

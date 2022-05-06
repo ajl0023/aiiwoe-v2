@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { Route, Routes } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Route, Switch, Routes } from "react-router";
-import bootstrap from "bootstrap/scss/bootstrap.scss";
 import "./App.css";
-import Home from "./components/Home/Home";
-import CupSelect from "./components/CupSelect/CupSelect";
 import ChatRoom from "./components/ChatRoom/ChatRoom";
-import { SocketContext, SocketComponent } from "./contexts/SocketContext";
-import { ChatTypeComponent } from "./contexts/ChatContext";
 import CheckSocket from "./components/CheckSocket/CheckSocket";
+import CupSelect from "./components/CupSelect/CupSelect";
+import Home from "./components/Home/Home";
+import { ChatTypeComponent } from "./contexts/ChatContext";
+import { SocketComponent } from "./contexts/SocketContext";
+
+import "bootstrap/scss/bootstrap.scss";
 // import Navbar from "./components/Navbar/Navbar";
-const UserContext = React.createContext(null);
-const SocketProvider = React.createContext(null);
+
 const App = () => {
   const [currentUser, setCurrentUser] = useState();
-  const [chatType, setChatType] = useState();
 
   const selectUser = (user) => {
     setCurrentUser(user);
@@ -25,12 +24,6 @@ const App = () => {
     <div className="app-wrapper">
       <Router>
         {/* <Navbar></Navbar> */}
-        {/* <UserContext.Provider
-          value={{
-            user: currentUser,
-            setCurrentUser,
-          }}
-        > */}
 
         <SocketComponent>
           <ChatTypeComponent>
@@ -48,8 +41,6 @@ const App = () => {
             </Routes>
           </ChatTypeComponent>
         </SocketComponent>
-
-        {/* </UserContext.Provider> */}
       </Router>
     </div>
   );

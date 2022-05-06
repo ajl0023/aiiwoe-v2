@@ -9,6 +9,11 @@ $background: orange;
   justify-content: center;
   height: 100%;
   flex-direction: column;
+  padding: 30px;
+  @include min-screen($mobile-sm) {
+    padding: 0;
+    
+  }
 }
 .logo-container {
   max-width: 400px;
@@ -29,7 +34,7 @@ $background: orange;
   flex-direction: column;
   $btn_primary: white;
   $btn_primary_outline: transparent;
-  max-width: 400px;
+
   width: 100%;
   .btn:first-child {
     @include button-variant(

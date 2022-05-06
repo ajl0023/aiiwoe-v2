@@ -38,7 +38,7 @@ function ChatUser({ tableSize, index, user }) {
     tableItem.current.style.left = `${
       radius * Math.cos(theta[index]) + radius - eleWidth
     }px`;
-  }, [index]);
+  }, [index, tableSize]);
   return (
     <div ref={tableItem} className="user-container">
       <div className="user-image-container">
