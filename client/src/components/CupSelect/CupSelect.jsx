@@ -12,10 +12,11 @@ const UserCup = ({ item, setSelected, selected, type }) => {
   const { chatType } = useContext(ChatTypeContext);
   const navigate = useNavigate();
   const joinRoom = (item) => {
+    socket.emit("join", { ...item, type: chatType }, (room) => {});
+
     setSelected(item);
 
     navigate(`/chat`);
-    socket.emit("join", { ...item, type: chatType }, (room) => {});
   };
 
   return (
